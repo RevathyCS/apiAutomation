@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+    postman:
+        image: postman/newman:alpine
+        container_name: postman
+        volumes:
+            - ./:/etc/newman
+        command: 
+            - "run"
+            - "mycollection.json"
